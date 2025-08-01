@@ -2,22 +2,21 @@
 # -*- ENCODING: UTF-8 -*-
 #inicio
     clear
-    echo
-    echo
-    echo
     echo ::::::::::::::::::::::::::::::::::
     echo ::::__script_de_instalacion___::::
     echo ::::::::::::::::::::::::::::::::::
-    echo
-    echo
-    echo
+    sleep 5
+    clear
+    echo :::::::::::::::
+    echo ::Version:1.3{beta}::
+    echo :::::::::::::::
+    sleep 5
+    clear
     echo :::::::::::::::::::::::::::::::::::::::
-    echo ::::Te_pedire_la_contraseña_5_veces::::
+    echo ::::Te_pedira_la_contraseña_5_veces::::
     echo :::::::::::::::::::::::::::::::::::::::
-    echo
-    echo
-    echo
 sleep 5
+clear
 #yay
     clear
     cd /tmp
@@ -31,6 +30,9 @@ sleep 5
 #htop & fastfetch
     clear
     sudo pacman -Sy htop fastfetch --noconfirm
+#flatpak
+    clear
+    sudo pacman -Sy flatpak
 #instalacion del escritorio
     clear
     sudo pacman -Sy xfce4 xfce4-goodies xorg --noconfirm
@@ -40,7 +42,22 @@ sleep 5
     sudo systemctl enable lightdm
 #libreoffice
     clear
+    echo :::::::::::::::
+    echo ::LibreOffice::
+    echo :::::::::::::::
+    sleep 2
     sudo pacman -Sy libreoffice-fresh-es --noconfirm
+#onlyoffice
+    clear
+    echo ::::::::::::::
+    echo ::OnlyOffice::
+    echo ::::::::::::::
+    echo
+    echo ::::::::::::::::::::::::::::::
+    echo ::Te_pedira_confirmacion_¨y¨::
+    echo ::::::::::::::::::::::::::::::
+    sleep 2
+    flatpak install flathub org.onlyoffice.desktopeditors
 #kde
     clear
     sudo pacman -Sy okular kate --noconfirm
@@ -50,10 +67,6 @@ sleep 5
 #librewolf
     clear
     yay -Sy librewolf-bin --noconfirm
-#pamac
-    clear
-    yay -Sy libpamac-flatpak --noconfirm
-    yay -Sy pamac-flatpak --noconfirm
 #konsole
     clear
     sudo pacman -Sy konsole --noconfirm
