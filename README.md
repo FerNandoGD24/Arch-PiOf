@@ -40,7 +40,7 @@ mkdir script
 cd script
 ```
 ```
-git clone https://github.com/FerNandoXr24/Arch-PIO.git
+git clone https://github.com/FerNandoGD24/Arch-PiOf.git
 ```
 ```
 cd Arch-PiOf
