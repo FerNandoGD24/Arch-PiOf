@@ -12,7 +12,7 @@
     echo
     echo
     echo :::::::::::::::::::::::::::::::::::::::
-    echo ::::Te_pedire_la_contraseña_2_veces::::
+    echo ::::Te_pedire_la_contraseña_5_veces::::
     echo :::::::::::::::::::::::::::::::::::::::
     echo
     echo
