@@ -43,7 +43,7 @@ cd script
 git clone https://github.com/FerNandoXr24/Arch-PIO.git
 ```
 ```
-cd Arch-PIO
+cd Arch-PiOf
 ```
 ```
 bash install.sh
