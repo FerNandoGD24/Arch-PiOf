@@ -17,6 +17,8 @@
     clear
 #pacman
     sudo pacman -Syyu --noconfirm
+    sudo pacman -S xorg-server --noconfirm
+    sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit
     sudo pacman -S xfce4 lightdm lightdm-gtk-greeter --noconfirm
     sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil udftools --noconfirm
 #flatpak
