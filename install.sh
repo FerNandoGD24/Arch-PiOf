@@ -10,13 +10,14 @@
     echo ::Version:1.3{beta}::
     echo ::{:::::::::::::::}::
     sleep 1
-    echo ::{::::::::::::::::::::::::::::::::}::
-    echo ::Te_pedira_la_contraseña_unas_veces::
-    echo ::{::::::::::::::::::::::::::::::::}::
+    echo ::{::::::::::::::::::::::::::::::::::::}::
+    echo ::__Te_pedira_la_contraseña_unas_veces__::
+    echo ::{::::::::::::::::::::::::::::::::::::}::
     sleep 5
     clear
 #pacman
     sudo pacman -Syyu --noconfirm
+    sudo pacman -S xfce4 lightdm lightdm-gtk-greeter --noconfirm
     sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil udftools --noconfirm
 #flatpak
     echo ::{::::::::::::::::::::::::}::
@@ -27,6 +28,8 @@
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
+#DM
+    sudo systemctl enable lightdm.service
 #aur
     mkdir /tmp/aur
     cd /tmp/aur
