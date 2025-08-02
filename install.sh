@@ -36,15 +36,15 @@
     cd aur
     git clone https://aur.archlinux.org/librewolf-bin.git
     cd librewolf-bin/
-    makepkg -sir
+    makepkg -sir --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/webapp-manager-git.git
     cd webapp-manager-git
-    makepkg -sir
+    makepkg -sir --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
     cd ttf-ms-win11-auto
-    makepkg -sir
+    makepkg -sir --noconfirm
     cd /tmp/aur
 #limpieza
     sudo pacman -Scc --noconfirm
