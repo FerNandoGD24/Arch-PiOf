@@ -34,7 +34,7 @@ sudo pacman -Syu git --noconfirm
 
 ## Script
 ```
-cd /tmp &&mkdir script cd script && git clone https://github.com/FerNandoGD24/Arch-PiOf.git && cd Arch-PiOf && bash install.sh
+git clone https://github.com/FerNandoGD24/Arch-PiOf.git && cd Arch-PiOf && bash install.sh
 ```
 
 - Luego tendras que poner tu contraseña cuando te la pida, al inicio de te la pedira unas 3 veces y al final una vez
