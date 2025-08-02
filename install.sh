@@ -22,11 +22,8 @@
     sudo pacman -S xfce4 lightdm lightdm-gtk-greeter --noconfirm
     sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil udftools --noconfirm
 #flatpak
-    echo ::{::::::::::::::::::::::::}::
-    echo ::__te_pedira_confirmacion__::
-    echo ::{::::::::::::::::::::::::}::
-    sleep 5
-    flatpak install flathub org.onlyoffice.desktopeditors
+    flatpak install --non-interactive flathub org.onlyoffice.desktopeditors
+    flatpak install --non-interactive flathub io.gitlab.librewolf-community
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -45,10 +42,6 @@
     cd /tmp/aur
     git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
     cd ttf-ms-win11-auto
-    makepkg -si --noconfirm
-    cd /tmp/aur
-    git clone https://aur.archlinux.org/librewolf-bin.git
-    cd librewolf-bin/
     makepkg -si --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/webapp-manager-git.git
