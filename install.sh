@@ -10,13 +10,13 @@
     echo ::Version:1.3{beta}::
     echo ::{:::::::::::::::}::
     sleep 1
-    echo ::{:::::::::::::::::::::::::::::}::
-    echo ::Te_pedira_la_contraseña_5_veces::
-    echo ::{:::::::::::::::::::::::::::::}::
+    echo ::{::::::::::::::::::::::::::::::::}::
+    echo ::Te_pedira_la_contraseña_unas_veces::
+    echo ::{::::::::::::::::::::::::::::::::}::
     sleep 5
     clear
 #pacman
-    sudo pacman -Syyu flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil  --noconfirm
+    sudo pacman -Syyu flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil p7zip httpdirfs udftools --noconfirm
 #flatpak
     echo ::{::::::::::::::::::::::::}::
     echo ::__te_pedira_confirmacion__::
@@ -52,5 +52,17 @@
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
     echo ::{::::::::::::}::
-    sleep 5
+    sleep 1
+    echo 5
+    sleep 1
+    echo 4
+    sleep 1
+    echo 3
+    sleep 1
+    echo 2
+    sleep 1
+    echo 1
+    sleep 1
+    echo reiniciando
+    sleep 1
     reboot
