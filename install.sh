@@ -32,23 +32,23 @@
     cd /tmp/aur
     git clone https://aur.archlinux.org/p7zip-full-bin.git
     cd p7zip-full-bin
-    makepkg -si
+    makepkg -si --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/httpdirfs-git.git
     cd httpdirfs-git
-    makepkg -si
+    makepkg -si --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
     cd ttf-ms-win11-auto
-    makepkg -si
+    makepkg -si --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/librewolf-bin.git
     cd librewolf-bin/
-    makepkg -si
+    makepkg -si --noconfirm
     cd /tmp/aur
     git clone https://aur.archlinux.org/webapp-manager-git.git
     cd webapp-manager-git
-    makepkg -si
+    makepkg -si --noconfirm
 #limpieza
     sudo pacman -Scc --noconfirm
     sudo pacman -Syyu --noconfirm
