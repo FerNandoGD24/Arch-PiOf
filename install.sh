@@ -16,7 +16,7 @@
     sleep 5
     clear
 #pacman
-    sudo pacman -Syyu flatpak htio fastfetch xfce4 xfce4-goodies xorg lightdm lightdm-gtk-greeter libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil  --noconfirm
+    sudo pacman -Syyu flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil  --noconfirm
 #flatpak
     echo ::{::::::::::::::::::::::::}::
     echo ::__te_pedira_confirmacion__::
@@ -26,25 +26,21 @@
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
-#servicios
-    sudo systemctl enable NetworkManager.service
-    sudo systemctl enable ModemManager.service
-    sudo systemctl enable lightdm
 #aur
     cd /tmp
     mkdir aur
     cd aur
     git clone https://aur.archlinux.org/librewolf-bin.git
     cd librewolf-bin/
-    makepkg -sir --noconfirm
+    makepkg -si
     cd /tmp/aur
     git clone https://aur.archlinux.org/webapp-manager-git.git
     cd webapp-manager-git
-    makepkg -sir --noconfirm
+    makepkg -si
     cd /tmp/aur
     git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
     cd ttf-ms-win11-auto
-    makepkg -sir --noconfirm
+    makepkg -si
     cd /tmp/aur
 #limpieza
     sudo pacman -Scc --noconfirm
