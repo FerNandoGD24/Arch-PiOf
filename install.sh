@@ -17,7 +17,7 @@
     clear
 #pacman
     sudo pacman -Syyu --noconfirm
-    sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil p7zip httpdirfs udftools --noconfirm
+    sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil udftools --noconfirm
 #flatpak
     echo ::{::::::::::::::::::::::::}::
     echo ::__te_pedira_confirmacion__::
@@ -29,6 +29,14 @@
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #aur
     mkdir /tmp/aur
+    cd /tmp/aur
+    git clone https://aur.archlinux.org/p7zip-full-bin.git
+    cd p7zip-full-bin
+    makepkg -si
+    cd /tmp/aur
+    git clone https://aur.archlinux.org/httpdirfs-git.git
+    cd httpdirfs-git
+    makepkg -si
     cd /tmp/aur
     git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
     cd ttf-ms-win11-auto
