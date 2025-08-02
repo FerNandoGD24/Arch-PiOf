@@ -26,28 +26,17 @@ Este script basicamente instala un escritorio ligero, un gestor de sesiones y to
 - En la parte de login: el nombre que configuraste en la instalacion
 - En la parte de contraseña/password: la contraseña que configuraste
 - Debemos instalar "git" con el siguiente comando nos pedira la contraseña
+
+## GIT
 ```
 sudo pacman -Syu git --noconfirm
 ```
-- Luego ponemos los siguientes comandos
+
+## Script
 ```
-cd /
+cd /tmp &&mkdir script cd script && git clone https://github.com/FerNandoGD24/Arch-PiOf.git && cd Arch-PiOf && bash install.sh
 ```
-```
-mkdir script
-```
-```
-cd script
-```
-```
-git clone https://github.com/FerNandoGD24/Arch-PiOf.git
-```
-```
-cd Arch-PiOf
-```
-```
-bash install.sh
-```
+
 - Luego tendras que poner tu contraseña cuando te la pida, al inicio de te la pedira unas 3 veces y al final una vez
 - Tu pc se va a reiniciar despues de la instalacion y estara todo listo
 - Luego tu tendras que encargarte de la personalizacion (en el futuro hare un tutorial)
