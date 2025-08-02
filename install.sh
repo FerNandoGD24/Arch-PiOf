@@ -34,7 +34,9 @@
     cd /tmp/aur
     git clone https://aur.archlinux.org/p7zip-full-bin.git
     cd p7zip-full-bin
-    makepkg -si --noconfirm --skippgpcheck
+    makepkg
+    cd /tmp/aur/p7zip-full-bin
+    sudo pacman -U p7zip-full-bin-23.01-x86_64.pkg.tar.zst
     cd /tmp/aur
     git clone https://aur.archlinux.org/httpdirfs-git.git
     cd httpdirfs-git
