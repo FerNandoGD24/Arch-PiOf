@@ -28,9 +28,12 @@
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #aur
-    cd /tmp
-    mkdir aur
-    cd aur
+    mkdir /tmp/aur
+    cd /tmp/aur
+    git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
+    cd ttf-ms-win11-auto
+    makepkg -si
+    cd /tmp/aur
     git clone https://aur.archlinux.org/librewolf-bin.git
     cd librewolf-bin/
     makepkg -si
@@ -38,11 +41,6 @@
     git clone https://aur.archlinux.org/webapp-manager-git.git
     cd webapp-manager-git
     makepkg -si
-    cd /tmp/aur
-    git clone https://aur.archlinux.org/ttf-ms-win11-auto.git
-    cd ttf-ms-win11-auto
-    makepkg -si
-    cd /tmp/aur
 #limpieza
     sudo pacman -Scc --noconfirm
     sudo pacman -Syyu --noconfirm
