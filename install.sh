@@ -16,7 +16,8 @@
     sleep 5
     clear
 #pacman
-    sudo pacman -Syyu flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil p7zip httpdirfs udftools --noconfirm
+    sudo pacman -Syyu --noconfirm
+    sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil p7zip httpdirfs udftools --noconfirm
 #flatpak
     echo ::{::::::::::::::::::::::::}::
     echo ::__te_pedira_confirmacion__::
