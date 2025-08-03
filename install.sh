@@ -55,7 +55,7 @@
         git clone https://github.com/FerNandoGD24/yay-fork.git
         cd yay-fork
         makepkg
-        sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst
+        sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst --noconfirm
     #yay
         yay -Sy onlyoffice webapp-manager-git --noconfirm
 #limpieza
