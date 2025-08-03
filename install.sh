@@ -34,6 +34,9 @@
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #DM
     sudo systemctl enable lightdm.service
+#theme
+    mkdir ~/.themes
+    mkdir ~/.icons
 #aur
      #ttf
         cd /tmp/aur
