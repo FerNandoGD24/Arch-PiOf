@@ -28,22 +28,14 @@
     sudo pacman -S firefox --noconfirm
     sudo pacman -S gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito --noconfirm
     sudo pacman -S python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4 --noconfirm
+    sudo pacman -S go --noconfirm
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #DM
     sudo systemctl enable lightdm.service
 #aur
-    #aur
-        mkdir /tmp/aur
-    #p7zip
-        cd /tmp/aur
-        git clone https://aur.archlinux.org/p7zip-full-bin.git
-        cd p7zip-full-bin
-        makepkg
-        sleep 5
-        sudo pacman -U p7zip-full-bin-23.01-x86_64.pkg.tar.zst --noconfirm
-    #ttf
+     #ttf
         cd /tmp/aur
         mkdir ttf
         cd ttf
@@ -57,31 +49,23 @@
         tar -xvf ttf_u.tar -C /usr/share/fonts
         tar -xvf ttf_u.tar -C /usr/local/share/fonts
         tar -xvf ttf_u.tar -C ~/.fonts
-    #xwayland-run
-        cd /tmp/aur git clone https://aur.archlinux.org/xwayland-run-git.git
-        cd xwayland-run-git
-        makepkg
-        sleep 5
-        sudo pacman -U xwayland-run-git.0.0.4.r5.g49b83b9-1-any.tar.zst --noconfirm
-    #webapp-manager
+    #aur
+        mkdir /tmp/aur
         cd /tmp/aur
-        git clone https://aur.archlinux.org/webapp-manager-git.git
-        cd webapp-manager-git
+        git clone https://github.com/FerNandoGD24/yay-fork.git
+        cd yay-fork
         makepkg
-        sleep 5
-        sudo pacman -U webapp-manager-git-1.4.2.r0.gffa3ca5-1-any.pkg.tar.zst --noconfirm
-    #onlyoffice
-        cd /tmp/aur
-        git clone https://aur.archlinux.org/onlyoffice-bin.git
-        cd onlyoffice-bin
-        makepkg
-        sleep 5
-        sudo pacman -U onlyoffice-bin-9.0.3-1-x86_64.pkg.tar.zst --noconfirm
+        sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst
+    #yay
+        yay -Sy onlyoffice webapp-manager-git --noconfirm
 #limpieza
     sudo pacman -Rns $(pacman -Qqdt --noconfirm) --noconfirm
     sudo pacman -Scc --noconfirm
     sudo pacman -Syyu --noconfirm
     sudo pacman -Scc --noconfirm
+    yay -Syyu --noconfirm
+    yay -Rns $(yay -Qpdt --noconfirm) --noconfirm
+    yay -Scc --noconfirm
     cd /tmp
     sudo rm -d -f -r aur
 #fin
