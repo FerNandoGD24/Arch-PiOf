@@ -29,6 +29,7 @@
     sudo pacman -S gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito --noconfirm
     sudo pacman -S python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4 --noconfirm
     sudo pacman -S go --noconfirm
+    sudo pacman -S xfce4-whiskermenu-plugin --noconfirm
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
