@@ -57,7 +57,7 @@
         makepkg
         sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst --noconfirm
     #yay
-        yay -Sy onlyoffice webapp-manager-git --noconfirm
+        yay -Sy onlyoffice-bin webapp-manager-git --noconfirm
 #limpieza
     sudo pacman -Rns $(pacman -Qqdt --noconfirm) --noconfirm
     sudo pacman -Scc --noconfirm
