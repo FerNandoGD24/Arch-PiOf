@@ -9,12 +9,11 @@
     echo ::{:::::::::::::::}::
     echo ::Version:1.3{beta}::
     echo ::{:::::::::::::::}::
-    sleep 1
-    echo ::{::::::::::::::::::::::::::::::::::::}::
-    echo ::__Te_pedira_la_contraseña_unas_veces__::
-    echo ::{::::::::::::::::::::::::::::::::::::}::
-    sleep 5
+    sleep 6
     clear
+    echo ::{::::::::::::::::::::::::}::
+    echo ::__introdusca_su_contraseña::
+    echo ::{::::::::::::::::::::::::}::
 #pacman
     sudo pacman -Syyu --noconfirm
     sudo pacman -S --needed base-devel git --noconfirm
