@@ -27,6 +27,7 @@
     sudo pacman -S flatpak htop fastfetch libreoffice-fresh-es vlc vlc-plugin-ffmpeg konsole discover ark pavucontrol spotify-launcher linux-zen okular kate networkmanager network-manager-applet bluedevil udftools --noconfirm
     sudo pacman -S firefox --noconfirm
     sudo pacman -S gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito --noconfirm
+    sudo pacman -S python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4 --noconfirm
 #kernel
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
