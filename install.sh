@@ -107,7 +107,7 @@
         yay -S onlyoffice-bin --noconfirm
     #internet
         yay -S webapp-manager-git --noconfirm
-        yay -S brave-bin
+        yay -S brave-bin --noconfirm
 #extras
     cd
     mkdir .themes
