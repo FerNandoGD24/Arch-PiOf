@@ -109,10 +109,8 @@
     mkdir .themes
     mkdir .icons
 #limpieza
-    sudo pacman -Rns $(pacman -Qqdt --noconfirm) --noconfirm
     sudo pacman -Syyu --noconfirm
     sudo pacman -Scc --noconfirm
-    yay -Rns $(yay -Qpdt --noconfirm) --noconfirm
     yay -Syyu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
