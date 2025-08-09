@@ -74,13 +74,17 @@
         sudo systemctl restart bluetooth.service
 #Aur
     #yay
-        cd /tmp
-        mkdir aur
-        cd aur
-        git clone https://github.com/FerNandoGD24/yay-fork.git
-        cd yay-fork
-        makepkg
-        sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst --noconfirm
+        #pacman
+            sudo pacman -S go --noconfirm
+        #makepkg
+            cd /tmp
+            mkdir aur
+            cd aur
+            git clone https://github.com/FerNandoGD24/yay-fork.git
+            cd yay-fork
+            makepkg
+            sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst --noconfirm
+    #ttf
         cd /tmp/aur
         mkdir ttf
         cd ttf
