@@ -81,6 +81,9 @@
     #yay
         #pacman
             sudo pacman -S go --noconfirm
+            sudo pacman -S go --noconfirm
+            sudo pacman -S go --noconfirm
+            sudo pacman -S go --noconfirm
         #makepkg
             cd /tmp
             mkdir aur
@@ -122,6 +125,7 @@
     sudo rm -dfr /tmp/aur
     cd
     sudo rm -dfr Arch-PiOf
+    cd
 #kernel
     sudo pacman -S linux-zen --noconfirm
     sudo pacman -R linux --noconfirm
