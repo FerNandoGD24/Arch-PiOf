@@ -39,7 +39,7 @@
     #utilidades
         sudo pacman -S discover ark kate --noconfirm
     #web
-        sudo pacman -S firefox brave-browser --noconfirm
+        sudo pacman -S firefox --noconfirm
     #internet
         sudo pacman -S networkmanager --noconfirm
         sudo systemctl enable NetworkManager
@@ -109,6 +109,7 @@
         yay -S onlyoffice-bin --noconfirm
     #internet
         yay -S webapp-manager-git --noconfirm
+        yay -S brave-bin
 #extras
     cd
     mkdir .themes
@@ -124,8 +125,6 @@
     sudo pacman -S linux-zen --noconfirm
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
-#web
-    sudo pacman -S firefox brave-browser --noconfirm
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
