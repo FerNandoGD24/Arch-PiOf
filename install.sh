@@ -120,7 +120,8 @@
     yay -Syyu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
-    
+    cd
+    sudo rm -dfr Arch-PiOf
 #kernel
     sudo pacman -S linux-zen --noconfirm
     sudo pacman -R linux --noconfirm
