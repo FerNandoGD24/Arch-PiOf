@@ -23,7 +23,7 @@
     #escritorio
         sudo pacman -S lxqt --noconfirm
     #Display manager
-        sudo pacman -S lightdm --noconfirm
+        sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm
         sudo systemctl enable lightdm
     #extras
         sudo pacman -S htop fastfetch konsole --noconfirm
