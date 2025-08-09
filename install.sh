@@ -90,14 +90,14 @@
         cd ttf
         git clone https://github.com/FerNandoGD24/ttf.git
         cd ttf
-        cat ttfp_* > ttf_u.tar.xz
-        xz -d ttf_u.tar.xz
-        mkdir /usr/share/fonts
-        mkdir /usr/local/share/fonts
-        mkdir ~/.fonts
-        tar -xvf ttf_u.tar -C /usr/share/fonts
-        tar -xvf ttf_u.tar -C /usr/local/share/fonts
-        tar -xvf ttf_u.tar -C ~/.fonts
+        sudo cat ttfp_* > ttf_u.tar.xz
+        sudo xz -d ttf_u.tar.xz
+        sudo mkdir /usr/share/fonts
+        sudo mkdir /usr/local/share/fonts
+        sudo mkdir ~/.fonts
+        sudo tar -xvf ttf_u.tar -C /usr/share/fonts
+        sudo tar -xvf ttf_u.tar -C /usr/local/share/fonts
+        sudo tar -xvf ttf_u.tar -C ~/.fonts
 #yay
     yay -Syyuu --noconfirm
     #ofimatica
@@ -114,6 +114,7 @@
     yay -Syyu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
+    
 #kernel
     sudo pacman -S linux-zen --noconfirm
     sudo pacman -R linux --noconfirm
