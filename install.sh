@@ -104,10 +104,6 @@
         yay -S onlyoffice-bin --noconfirm
     #internet
         yay -S webapp-manager-git --noconfirm
-#kernel
-    sudo pacman -S linux-zen --noconfirm
-    sudo pacman -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #extras
     cd
     mkdir .themes
@@ -120,6 +116,10 @@
     yay -Syyu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
+#kernel
+    sudo pacman -S linux-zen --noconfirm
+    sudo pacman -R linux --noconfirm
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
