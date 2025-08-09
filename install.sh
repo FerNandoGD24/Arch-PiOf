@@ -124,6 +124,8 @@
     sudo pacman -S linux-zen --noconfirm
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
+#web
+    sudo pacman -S firefox brave-browser --noconfirm
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
