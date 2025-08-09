@@ -17,7 +17,7 @@
 #pacman
     sudo pacman -Syyu
     #dependencias
-        sudo pacman -S -needed git base-devel  xorg-server libxss cbindgen clang imake inetutils jq lld llvm nasm nodejs python-setuptools rust unzip wasi-compiler-rt wasi-libc++ wasi-libc++abi wasi-libc yasm zip weston xorg-xwayland libxt startup-notification mime-types ttf-font ffmpeg ttf-font python-brautifulsoup4 python-configobj python-gobject python-pillow python-setproctitle python-tldextract xapp flatpak gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4  --noconfirm
+        sudo pacman -S -needed git base-devel go xorg-server libxss cbindgen clang imake inetutils jq lld llvm nasm nodejs python-setuptools rust unzip wasi-compiler-rt wasi-libc++ wasi-libc++abi wasi-libc yasm zip weston xorg-xwayland libxt startup-notification mime-types ttf-font ffmpeg ttf-font python-brautifulsoup4 python-configobj python-gobject python-pillow python-setproctitle python-tldextract xapp flatpak gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4  --noconfirm
     #drivers
         sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
     #escritorio
