@@ -14,6 +14,10 @@
     echo ::{::::::::::::::::::::::::::}::
     echo ::__introdusca_su_contraseña__::
     echo ::{::::::::::::::::::::::::::}::
+    echo
+    echo ::{:::::::::::::::::::::::::::::::::::::::::::::::::}::
+    echo ::{__en_la_instalacion_de_yay_te_pedira_contraseña__}::
+    echo ::{:::::::::::::::::::::::::::::::::::::::::::::::::}::
 #mirrors
     sudo pacman -Syyuu --noconfirm
 #yay
@@ -27,10 +31,13 @@
         sleep 2
         yay -Syyuu --noconfirm
 #ttf
-    cd /tmp/aur
+    cd
     git clone https://github.com/FerNandoGD24/ttf.git
     cd ttf
     bash ttf.sh
+    sleep 5
+    cd
+    rm -fdr ttf
 #drivers
     yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
 #Escritorio
