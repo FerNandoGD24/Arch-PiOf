@@ -12,6 +12,14 @@ el script depende de mis repositorios de github:
 
 Este script fue probado en una maquina virtual con 64 gb de espacio, 1 nucleo y 1gb de ram
 
+Esto fue instalado con archinstall:
+- idioma del equipo
+- repositorios
+- particionamiento de disco
+- contraseña root
+- usuario
+- internet
+
 ## dependencias
 
 ```
@@ -33,3 +41,7 @@ cd Arch-PiOf
 bash install.sh
 ```
 ## durante la ejecucion del script
+* inicio
+  - te pedira la contraseña para instalar yay, luego de eso no te pedira mas la contraseña
+* final
+  - el equipo se apagara automaticamente, cuando lo enciendas tendra todo instalado
