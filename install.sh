@@ -68,6 +68,7 @@
     echo ::{__instalando_programas__}::
     echo ::{::::::::::::::::::::::::}::
     #discover
+         yay -S flatpak --noconfirm
          yay -S discover --noconfirm
     #ark
         yay -S ark --noconfirm
@@ -161,7 +162,7 @@
         systemctl --user restart wireplumber
         sudo systemctl restart bluetooth.service
 #limpieza
-    yay -Syyuu --noconfirm
+    yay -Syyu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
     cd
