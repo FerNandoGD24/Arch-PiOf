@@ -7,34 +7,88 @@
     echo ::{:::::::::::::::::::::::}::
     sleep 1
     echo ::{:::::::::::::::}::
-    echo ::Version:1.3{beta}::
+    echo ::{__Version:1.5__}::
     echo ::{:::::::::::::::}::
     sleep 6
     clear
-    echo ::{::::::::::::::::::::::::}::
-    echo ::__introdusca_su_contraseña::
-    echo ::{::::::::::::::::::::::::}::
-#pacman
-    sudo pacman -Syy
-    #dependencias
-        sudo pacman -S -needed git base-devel go xorg-server libxss cbindgen clang imake inetutils jq lld llvm nasm nodejs python-setuptools rust unzip wasi-compiler-rt wasi-libc++ wasi-libc++abi wasi-libc yasm zip weston xorg-xwayland libxt startup-notification mime-types ttf-font ffmpeg ttf-font python-brautifulsoup4 python-configobj python-gobject python-pillow python-setproctitle python-tldextract xapp flatpak gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4  --noconfirm
-    #drivers
-        sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
-    #escritorio
-        sudo pacman -S lxqt --noconfirm
-    #Display manager
-        sudo pacman -S lightdm lightdm-gtk-greeter --noconfirm
+    echo ::{::::::::::::::::::::::::::}::
+    echo ::__introdusca_su_contraseña__::
+    echo ::{::::::::::::::::::::::::::}::
+#mirrors
+    sudo pacman -Syyuu --noconfirm
+#yay
+    #instalacion
+        cd /tmp
+        mkdir aur
+        cd aur
+        git clone https://github.com/FerNandoGD24/yay-fork.git
+        cd yay-fork
+        bash yay.sh
+        sleep 2
+        yay -Syyuu --noconfirm
+#ttf
+    cd /tmp/aur
+    git clone https://github.com/FerNandoGD24/ttf.git
+    cd ttf
+    bash ttf.sh
+#drivers
+    yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
+#Escritorio
+    #paquetes
+        yay -S lxqt --noconfirm
+#DM
+    #paquetes
+        yay -S lightdm lightdm-gtk-greeter --noconfirm
+    #servicio
         sudo systemctl enable lightdm
-    #extras
-        sudo pacman -S htop fastfetch konsole --noconfirm
-    #multimedia
-        sudo pacman -S vlc vlc-plugin-ffmpeg spotify-launcher --noconfirm
-    #ofimatica
-        sudo pacman -S libreoffice-fresh-es okular --noconfirm
-    #utilidades
-        sudo pacman -S discover ark kate --noconfirm
-    #web
-        sudo pacman -S firefox --noconfirm
+#utilidades//extras
+    #discover
+         yay -S discover --noconfirm
+    #ark
+        yay -S ark --noconfirm
+    #htop
+        yay -S htop --noconfirm
+    #fastfetch
+        yay -S fastfetch --noconfirm
+    #konsole
+    yay -S konsole --noconfirm
+#multimedia
+    #vlc
+        #paquete
+            yay -S vlc --noconfirm
+        #plugins
+            yay -S vlc-plugin-ffmpeg --noconfirm
+    #spotify
+        yay -S spotify-launcher --noconfirm
+#ofimatica
+    #libreoffice
+        #paquetes
+            yay -S libreoffice-fresh --noconfirm
+        #extras
+            yay -S libreoffice-fresh-es --noconfirm
+    #kate
+        yay -S kate --noconfirm
+    #okular
+        yay -S okular --noconfirm
+    #onlyoffice
+        yay -S onlyoffice-bin --noconfirm
+#web
+    #firefox
+        yay -S firefox --noconfirm
+    #brave
+        yay -S brave-bin --noconfirm
+    #webapp manager
+        yay -S webapp-manager-git --noconfirm
+#kernel
+    yay -S linux-zen --noconfirm
+    yay -R linux --noconfirm
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+#personalizacion
+    #carpetas
+        cd
+        mkdir .themes
+        mkdir .icons
+#servicios
     #internet
         sudo pacman -S networkmanager --noconfirm
         sudo systemctl enable NetworkManager
@@ -72,59 +126,12 @@
         systemctl --user restart pipewire
         systemctl --user restart wireplumber
         sudo systemctl restart bluetooth.service
-#Aur
-    #yay
-        #pacman
-            sudo pacman -S go --noconfirm
-            sudo pacman -S go --noconfirm
-            sudo pacman -S go --noconfirm
-            sudo pacman -S go --noconfirm
-        #makepkg
-            cd /tmp
-            mkdir aur
-            cd aur
-            git clone https://github.com/FerNandoGD24/yay-fork.git
-            cd yay-fork
-            makepkg
-            sudo pacman -U yay-12.5.0-1-x86_64.pkg.tar.zst --noconfirm
-    #ttf
-        cd /tmp/aur
-        mkdir ttf
-        cd ttf
-        git clone https://github.com/FerNandoGD24/ttf.git
-        cd ttf
-        sudo cat ttfp_* > ttf_u.tar.xz
-        sudo xz -d ttf_u.tar.xz
-        sudo mkdir /usr/share/fonts
-        sudo mkdir /usr/local/share/fonts
-        sudo mkdir ~/.fonts
-        sudo tar -xvf ttf_u.tar -C /usr/share/fonts
-        sudo tar -xvf ttf_u.tar -C /usr/local/share/fonts
-        sudo tar -xvf ttf_u.tar -C ~/.fonts
-#yay
-    yay -Syyuu --noconfirm
-    #ofimatica
-        yay -S onlyoffice-bin --noconfirm
-    #internet
-        yay -S webapp-manager-git --noconfirm
-        yay -S brave-bin --noconfirm
-#extras
-    cd
-    mkdir .themes
-    mkdir .icons
 #limpieza
-    sudo pacman -Syyu --noconfirm
-    sudo pacman -Scc --noconfirm
-    yay -Syyu --noconfirm
+    yay -Syyuu --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
     cd
     sudo rm -dfr Arch-PiOf
-    cd
-#kernel
-    sudo pacman -S linux-zen --noconfirm
-    sudo pacman -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
@@ -143,4 +150,3 @@
     echo apagando
     sleep 1
     sudo shutdown -h now
-    
