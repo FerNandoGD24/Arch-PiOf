@@ -166,6 +166,11 @@
     sudo rm -dfr /tmp/aur
     cd
     sudo rm -dfr Arch-PiOf
+#servicio de actualizacion
+    cd
+    https://github.com/FerNandoGD24/APYAA.git
+    cd APYAA
+    bash install.sh
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
