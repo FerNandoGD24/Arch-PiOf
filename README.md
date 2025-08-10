@@ -1,5 +1,16 @@
 <h1 align="center">  SCRIPT POST INSTALACION OFIMATICA ARCH LINUX</h1>
-Este script basicamente instala un escritorio ligero, un gestor de sesiones y todas las heramientas necesaria(y algunas extras) para uso de ofimatica.
+
+## informacion
+este script instalara un escritorio ligero y las herramientas necesarias para ofimatica y uso normal
+
+## informacion adicional
+el script depende de mis repositorios de github:
+- [Arch-PiOf](<https://github.com/FerNandoGD24/Arch-PiOf>)
+- [yay-fork](<https://github.com/FerNandoGD24/yay-fork>)
+- [ttf](<https://github.com/FerNandoGD24/ttf>)
+- [APYAA](<https://github.com/FerNandoGD24/APYAA>)
+
+Este script fue probado en una maquina virtual con 64 gb de espacio, 1 nucleo y 1gb de ram
 
 ## dependencias
 
