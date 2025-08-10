@@ -173,6 +173,17 @@
     cd APYAA
     bash install.sh
     cd
+#pre-fin
+    yay -R qterminal --noconfirm
+    yay -Syyuu --noconfirm
+    yay -Syyu --noconfirm
+    yay -Syu --noconfirm
+    yay -Syy --noconfirm
+    yay -Suu --noconfirm
+    yay -Syu --noconfirm
+    yay -Sy --noconfirm
+    yay -Su --noconfirm
+    yay -Scc --noconfirm
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
