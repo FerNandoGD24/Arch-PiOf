@@ -47,6 +47,8 @@
     echo ::{:::::::::::::::::::::::::::::::::::::}::
     sleep 5
     yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
+    yay -Syyuu --noconfirm
+    yay -Scc --noconfirm
 #Escritorio
     #paquetes
         echo ::{::::::::::::::::::::::::::::::}::
@@ -58,6 +60,9 @@
         yay -S lightdm lightdm-gtk-greeter --noconfirm
     #servicio
         sudo systemctl enable lightdm
+    #limpieza
+        yay -Syyuu --noconfirm
+        yay -Scc --noconfirm
 #utilidades//extras
     echo ::{::::::::::::::::::::::::}::
     echo ::{__instalando_programas__}::
@@ -99,6 +104,9 @@
         yay -S brave-bin --noconfirm
     #webapp manager
         yay -S webapp-manager-git --noconfirm
+    #limpieza
+        yay -Syyuu --noconfirm
+        yay -Scc --noconfirm
 #kernel
     echo ::{:::::::::::::::::::}::
     echo ::{__instalando_kernel}::
