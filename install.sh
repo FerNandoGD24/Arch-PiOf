@@ -42,9 +42,16 @@
     cd
     rm -fdr ttf
 #drivers
+    echo ::{:::::::::::::::::::::::::::::::::::::}::
+    echo ::{__instalando_controladores_graficos__}::
+    echo ::{:::::::::::::::::::::::::::::::::::::}::
+    sleep 5
     yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
 #Escritorio
     #paquetes
+        echo ::{::::::::::::::::::::::::::::::}::
+        echo ::{__instalando_entorno_grafico__}::
+        echo ::{::::::::::::::::::::::::::::::}::
         yay -S lxqt --noconfirm
 #DM
     #paquetes
@@ -52,6 +59,9 @@
     #servicio
         sudo systemctl enable lightdm
 #utilidades//extras
+    echo ::{::::::::::::::::::::::::}::
+    echo ::{__instalando_programas__}::
+    echo ::{::::::::::::::::::::::::}::
     #discover
          yay -S discover --noconfirm
     #ark
@@ -61,7 +71,7 @@
     #fastfetch
         yay -S fastfetch --noconfirm
     #konsole
-    yay -S konsole --noconfirm
+        yay -S konsole --noconfirm
 #multimedia
     #vlc
         #paquete
@@ -90,6 +100,9 @@
     #webapp manager
         yay -S webapp-manager-git --noconfirm
 #kernel
+    echo ::{:::::::::::::::::::}::
+    echo ::{__instalando_kernel}::
+    echo ::{:::::::::::::::::::}::
     yay -S linux-zen --noconfirm
     yay -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -99,6 +112,9 @@
         mkdir .themes
         mkdir .icons
 #servicios
+    echo ::{::::::::::::::::::::::::}::
+    echo ::{__instalando_servicios__}::
+    echo ::{::::::::::::::::::::::::}::
     #internet
         sudo pacman -S networkmanager --noconfirm
         sudo systemctl enable NetworkManager
