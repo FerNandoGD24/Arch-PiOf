@@ -171,6 +171,7 @@
     https://github.com/FerNandoGD24/APYAA.git
     cd APYAA
     bash install.sh
+    cd
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
