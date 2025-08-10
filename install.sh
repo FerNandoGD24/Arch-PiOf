@@ -5,6 +5,7 @@
     echo ::{:::::::::::::::::::::::}::
     echo ::__script_de_instalacion__::
     echo ::{:::::::::::::::::::::::}::
+    echo
     sleep 1
     echo ::{:::::::::::::::}::
     echo ::{__Version:1.5__}::
@@ -14,10 +15,12 @@
     echo ::{::::::::::::::::::::::::::}::
     echo ::__introdusca_su_contraseña__::
     echo ::{::::::::::::::::::::::::::}::
+    sleep 1
     echo
     echo ::{:::::::::::::::::::::::::::::::::::::::::::::::::}::
     echo ::{__en_la_instalacion_de_yay_te_pedira_contraseña__}::
     echo ::{:::::::::::::::::::::::::::::::::::::::::::::::::}::
+    sleep 10
 #mirrors
     sudo pacman -Syyuu --noconfirm
 #yay
