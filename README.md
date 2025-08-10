@@ -32,3 +32,4 @@ cd Arch-PiOf
 ```
 bash install.sh
 ```
+## durante la ejecucion del script
