@@ -1,7 +1,7 @@
 <h1 align="center">📦 Post-Instalación Ofimática para Arch Linux</h1>
 
 <p align="center">
-  Un script automatizado para configurar un entorno ligero de escritorio en Arch Linux, enfocado en ofimática.
+  Un script automatizado para configurar un entorno ligero de escritorio en Arch Linux, enfocado en tareas ofimáticas.
 </p>
 
 ---
@@ -10,19 +10,19 @@
 
 Este script automatiza la configuración inicial de Arch Linux, instalando un entorno gráfico ligero (LXQt), controladores, herramientas de productividad, navegadores, utilidades, personalización y más.
 
-Ha sido diseñado para usuarios que desean tener su sistema Arch Linux listo para uso diario en pocos pasos, especialmente para tareas ofimáticas.
+Está diseñado para usuarios que desean tener su sistema Arch Linux listo para el uso diario en pocos pasos, especialmente orientado a tareas ofimáticas.
 
 ---
 
 ## 🧰 Características
 
-- 🔧 Instalación automática de `yay` y paquetes AUR
-- 💻 Escritorio ligero LXQt + LightDM
-- 📦 Herramientas ofimáticas: LibreOffice, OnlyOffice, Okular, Kate
-- 🌐 Navegadores: Firefox, Brave y WebApp Manager
-- 🎵 Multimedia: VLC, Spotify
-- 🖼️ Personalización: temas e íconos
-- 📡 Servicios: NetworkManager, Bluetooth, Audio con PipeWire
+- 🔧 Instalación automática de `yay` y paquetes desde AUR
+- 💻 Entorno de escritorio LXQt + LightDM como gestor de sesiones
+- 📦 Herramientas de oficina: LibreOffice, OnlyOffice, Okular, Kate
+- 🌐 Navegadores web: Firefox, Brave y WebApp Manager
+- 🎵 Aplicaciones multimedia: VLC, Spotify
+- 🖼️ Personalización básica (temas e íconos)
+- 📡 Servicios esenciales: red, audio y Bluetooth usando NetworkManager y PipeWire
 - 🛠️ Limpieza y mantenimiento automático del sistema
 - ⚙️ Reemplazo del kernel estándar por `linux-zen`
 
@@ -30,42 +30,42 @@ Ha sido diseñado para usuarios que desean tener su sistema Arch Linux listo par
 
 ## 🧪 Pruebas
 
-Este script fue probado en una máquina virtual con:
+Este script fue probado exitosamente en una máquina virtual con la siguiente configuración:
 
-- 64 GB de almacenamiento
-- 1 núcleo de CPU
-- 1 GB de RAM
+- 💾 64 GB de almacenamiento
+- 🧠 1 núcleo de CPU
+- 🧮 1 GB de RAM
 
-Sistema base instalado con [`archinstall`], incluyendo:
+El sistema fue instalado usando [`archinstall`], incluyendo:
 
-- Idioma y localización configurados
-- Repositorios configurados
+- Configuración de idioma y zona horaria
+- Repositorios actualizados
 - Disco particionado
-- Contraseña root definida
+- Contraseña de root definida
 - Usuario creado
-- Conexión a Internet funcional
+- Conexión a Internet activa
 
 ---
 
 ## 📦 Repositorios Utilizados
 
-El script depende de los siguientes repositorios:
+El script hace uso de los siguientes repositorios de GitHub:
 
-- [`Arch-PiOf`](https://github.com/FerNandoGD24/Arch-PiOf) – Este script
+- [`Arch-PiOf`](https://github.com/FerNandoGD24/Arch-PiOf) – Repositorio principal del script
 - [`yay-fork`](https://github.com/FerNandoGD24/yay-fork) – Fork personalizado de `yay`
-- [`ttf`](https://github.com/FerNandoGD24/ttf) – Paquetes de fuentes
-- [`APYAA`](https://github.com/FerNandoGD24/APYAA) – Script adicional de actualización
+- [`ttf`](https://github.com/FerNandoGD24/ttf) – Instalación de fuentes
+- [`APYAA`](https://github.com/FerNandoGD24/APYAA) – Script de actualización adicional
 
 ---
 
 ## 🔧 Instalación
 
-### 1. Instalar git
+### 1. Instalar Git
 
 ```bash
 sudo pacman -Syu git --noconfirm
 ```
-### 2. Descargar el script
+### 2. Clonar el repositorio
 ```bash
 cd
 git clone https://github.com/FerNandoGD24/Arch-PiOf.git
@@ -83,9 +83,9 @@ bash install.sh
 - Al finalizar, el sistema se apagará automáticamente. Al encenderlo nuevamente, todo estará configurado.
 ---
 ## 🛡️ Advertencias de Seguridad
-- El script accede a otros scripts de mi github con la finalidad de poder mejorar gradualmente cada seccion de los scripts
-- Se utiliza --noconfirm en todo momento para automatizar las instalaciones
-- En caso de que no este seguro de ejecutar el script, lo invito a leerlo, proximamente añadire documentacion extra dentro del porpio script
+- El script accede a otros scripts alojados en mis repositorios de GitHub. Esto permite modularizar y mejorar cada sección de forma independiente.
+- e utiliza la opción --noconfirm en todo momento para garantizar una instalación sin intervención.
+- Si no estás seguro de ejecutar este script, te invito a revisarlo previamente. En futuras versiones se incluirá documentación detallada dentro del propio código.
 ---
 
 ## 📫 Contacto
