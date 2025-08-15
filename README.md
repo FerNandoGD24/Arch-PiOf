@@ -84,8 +84,9 @@ bash install.sh
 ---
 ## 🛡️ Advertencias de Seguridad
 - El script accede a otros scripts alojados en mis repositorios de GitHub. Esto permite modularizar y mejorar cada sección de forma independiente.
-- e utiliza la opción --noconfirm en todo momento para garantizar una instalación sin intervención.
+- Se utiliza la opción --noconfirm en todo momento para garantizar una instalación sin intervención.
 - Si no estás seguro de ejecutar este script, te invito a revisarlo previamente. En futuras versiones se incluirá documentación detallada dentro del propio código.
+- Ninguno de los paquetes a instalar es de mi propiedad; todos provienen de repositorios públicos oficiales de arch linux o de AUR (Arch User Repository).
 ---
 
 ## 📫 Contacto
