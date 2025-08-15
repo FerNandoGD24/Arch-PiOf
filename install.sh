@@ -28,9 +28,9 @@
         cd /tmp
         mkdir aur
         cd aur
-        git clone https://github.com/FerNandoGD24/yay-fork.git
-        cd yay-fork
-        bash yay.sh
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+        makepkg -si
         sleep 2
         yay -Syyuu --noconfirm
 #ttf
