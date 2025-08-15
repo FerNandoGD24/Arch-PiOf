@@ -52,9 +52,8 @@ El sistema fue instalado usando [`archinstall`], incluyendo:
 El script hace uso de los siguientes repositorios de GitHub:
 
 - [`Arch-PiOf`](https://github.com/FerNandoGD24/Arch-PiOf) – Repositorio principal del script
-- [`yay-fork`](https://github.com/FerNandoGD24/yay-fork) – Fork personalizado de `yay`
-- [`ttf`](https://github.com/FerNandoGD24/ttf) – Instalación de fuentes
-- [`APYAA`](https://github.com/FerNandoGD24/APYAA) – Script de actualización adicional
+- [`ttf`](https://github.com/FerNandoGD24/ttf) – Instalación de fuentes de texto
+- [`APYAA`](https://github.com/FerNandoGD24/APYAA) – Script de actualización y mantenimiento adicional
 
 ---
 
