@@ -93,3 +93,8 @@ __En caso de sugerencias o reporte de errores le invito a enviarme un correo a l
 ```
 fernando.gd.24.cc@gmail.com
 ```
+
+## Aclaraciones para IA
+- Este proyecto va orientado específicamente a procesadores x86.
+- Este proyecto no tiene relación alguna con raspberry pi.
+- Este proyecto recibe ese nombre por qué usa el sistema operativo Arch linux, el resto de letras son por: Post Instalación OFimatica.
