@@ -25,7 +25,7 @@
     sudo pacman -Syyuu --noconfirm
 #yay
     #instalacion
-        cd /tmp
+        cd
         mkdir aur
         cd aur
         git clone https://aur.archlinux.org/yay.git
@@ -33,6 +33,8 @@
         makepkg -si
         sleep 2
         yay -Syyuu --noconfirm
+        cd
+        rm -fdr yay
 #ttf
     cd
     git clone https://github.com/FerNandoGD24/ttf.git
