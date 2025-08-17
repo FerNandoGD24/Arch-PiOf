@@ -23,6 +23,12 @@
     sleep 10
 #mirrors
     sudo pacman -Syyuu --noconfirm
+#drivers
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash drivers.sh
+    yay -S xorg-server xorg-xinit --noconfirm
 #yay
     #instalacion
         cd
@@ -37,12 +43,6 @@
     cd ttf
     bash ttf.sh
     sleep 5
-#drivers
-    cd
-    cd Arch-PiOf
-    cd scripts
-    bash drivers.sh
-    yay -S xorg-server xorg-xinit --noconfirm
 #DM-DE
     cd
     cd Arch-PiOf
