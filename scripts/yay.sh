@@ -1,4 +1,4 @@
-sudo pacman -S go
+sudo pacman -S go --noconfirm
 cd
 cd Arch-PiOf
 cd paquetes
