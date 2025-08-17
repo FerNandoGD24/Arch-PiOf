@@ -16,7 +16,7 @@ Está diseñado para usuarios que desean tener su sistema Arch Linux listo para 
 
 ## 🧰 Características
 
-- 🔧 Instalación automática de `yay` y paquetes desde AUR
+- 🔧 Instalación de `yay` y paquetes desde AUR
 - 💻 Entorno de escritorio LXQt + LightDM como gestor de sesiones
 - 📦 Herramientas de oficina: LibreOffice, OnlyOffice, Okular, Kate
 - 🌐 Navegadores web: Firefox, Brave y WebApp Manager
@@ -77,6 +77,7 @@ bash install.sh
 ---
 ## ⚠️ Durante la ejecución
 
+- Se te pedira elegir drivers a instalar, en caso de que no hagas nada en 60 segundos se instala el modo de compatibilidad (opcion 5)
 - Al inicio, te pedirá la contraseña solo una vez para instalar yay.
 - El script instala todos los paquetes de forma automática y sin intervención.
 - Al finalizar, el sistema se apagará automáticamente. Al encenderlo nuevamente, todo estará configurado.
