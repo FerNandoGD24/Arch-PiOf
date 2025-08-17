@@ -28,7 +28,7 @@
     cd Arch-PiOF
     cd scripts
     bash drivers.sh
-    yay -S xorg-server xorg-xinit --noconfirm
+    sudo pacman -S xorg-server xorg-xinit --noconfirm
 #yay
     #instalacion
         cd
