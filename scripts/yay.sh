@@ -4,4 +4,4 @@ cd Arch-PiOf
 cd paquetes
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
