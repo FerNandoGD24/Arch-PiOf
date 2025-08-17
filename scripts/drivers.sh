@@ -21,7 +21,7 @@ while true; do
     clear
     echo -e "\n⏳ Tiempo agotado..."
     echo "All (OpenSource)"
-    yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
+    sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
     break
   fi
 
@@ -29,31 +29,31 @@ while true; do
     1)
       clear
       echo "Ati"
-      yay -S xf86-video-ati mesa-amber lib32-mesa-amber --noconfirm
+      sudo pacman -S xf86-video-ati mesa-amber lib32-mesa-amber --noconfirm
       break
       ;;
     2)
       clear
       echo "Amd"
-      yay -S xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver mesa-vdpau --noconfirm
+      sudo pacman -S xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver mesa-vdpau --noconfirm
       break
       ;;
     3)
       clear
       echo "Intel"
-      yay -S xf86-video-intel mesa mesa-amber lib32-mesa lib32-mesa-amber vulkan-intel lib32-vulkan-intel libva-intel-driver libva-utils --noconfirm
+      sudo pacman -S xf86-video-intel mesa mesa-amber lib32-mesa lib32-mesa-amber vulkan-intel lib32-vulkan-intel libva-intel-driver libva-utils --noconfirm
       break
       ;;
     4)
       clear
       echo "Nvidia"
-      yay -S xf86-video-noveau mesa lib32-mesa vulkan-nouveau lib32-vulkan-nouveau --noconfirm
+      sudo pacman -S xf86-video-noveau mesa lib32-mesa vulkan-nouveau lib32-vulkan-nouveau --noconfirm
       break
       ;;
     5)
       clear
       echo "All (OpenSource)"
-      yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
+      sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
       break
       ;;
     *)
