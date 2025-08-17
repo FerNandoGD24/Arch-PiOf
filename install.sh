@@ -26,166 +26,59 @@
 #yay
     #instalacion
         cd
-        mkdir aur
-        cd aur
-        git clone https://aur.archlinux.org/yay.git
-        cd yay
-        makepkg -si
-        sleep 2
-        yay -Syyuu --noconfirm
-        cd
-        rm -fdr yay
+        cd Arch-PiOf
+        cd scripts
+        bash yay.sh
 #ttf
     cd
+    cd Arch-PiOf
+    cd paquetes
     git clone https://github.com/FerNandoGD24/ttf.git
     cd ttf
     bash ttf.sh
     sleep 5
-    cd
-    rm -fdr ttf
 #drivers
-    echo ::{:::::::::::::::::::::::::::::::::::::}::
-    echo ::{__instalando_controladores_graficos__}::
-    echo ::{:::::::::::::::::::::::::::::::::::::}::
-    sleep 5
-    yay -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
-    yay -Syyuu --noconfirm
-    yay -Scc --noconfirm
-#Escritorio
-    #paquetes
-        echo ::{::::::::::::::::::::::::::::::}::
-        echo ::{__instalando_entorno_grafico__}::
-        echo ::{::::::::::::::::::::::::::::::}::
-        yay -S lxqt --noconfirm
-#DM
-    #paquetes
-        yay -S lightdm lightdm-gtk-greeter --noconfirm
-    #servicio
-        sudo systemctl enable lightdm
-    #limpieza
-        yay -Syyuu --noconfirm
-        yay -Scc --noconfirm
-#utilidades//extras
-    echo ::{::::::::::::::::::::::::}::
-    echo ::{__instalando_programas__}::
-    echo ::{::::::::::::::::::::::::}::
-    #discover
-         yay -S flatpak --noconfirm
-         yay -S discover --noconfirm
-    #ark
-        yay -S ark --noconfirm
-    #htop
-        yay -S htop --noconfirm
-    #fastfetch
-        yay -S fastfetch --noconfirm
-    #konsole
-        yay -S konsole --noconfirm
-#multimedia
-    #vlc
-        #paquete
-            yay -S vlc --noconfirm
-        #plugins
-            yay -S vlc-plugin-ffmpeg --noconfirm
-    #spotify
-        yay -S spotify-launcher --noconfirm
-#ofimatica
-    #libreoffice
-        #paquetes
-            yay -S libreoffice-fresh --noconfirm
-        #extras
-            yay -S libreoffice-fresh-es --noconfirm
-    #kate
-        yay -S kate --noconfirm
-    #okular
-        yay -S okular --noconfirm
-    #onlyoffice
-        yay -S onlyoffice-bin --noconfirm
-#web
-    #firefox
-        yay -S firefox --noconfirm
-    #brave
-        yay -S brave-bin --noconfirm
-    #webapp manager
-        yay -S webapp-manager-git --noconfirm
-    #limpieza
-        yay -Syyuu --noconfirm
-        yay -Scc --noconfirm
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash drivers.sh
+    yay -S xorg-server xorg-xinit --noconfirm
+#DM-DE
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash DE-DM.sh
+#paquetes
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash paquetes.sh
 #kernel
-    echo ::{:::::::::::::::::::}::
-    echo ::{__instalando_kernel}::
-    echo ::{:::::::::::::::::::}::
-    yay -S linux-zen --noconfirm
-    yay -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash kernel.sh
 #personalizacion
     #carpetas
         cd
         mkdir .themes
         mkdir .icons
 #servicios
-    echo ::{::::::::::::::::::::::::}::
-    echo ::{__instalando_servicios__}::
-    echo ::{::::::::::::::::::::::::}::
-    #internet
-        sudo pacman -S networkmanager --noconfirm
-        sudo systemctl enable NetworkManager
-        sudo systemctl start NetworkManager
-        sudo pacman -S wpa_supplicant --noconfirm
-        sudo pacman -S networkmanager --noconfirm
-        sudo systemctl status NetworkManager
-        sudo systemctl restart NetworkManager
-    #bluetooth
-        sudo pacman -S bluez bluez-utils --noconfirm
-        sudo pacman -S blueman --noconfirm
-        sudo systemctl start bluetooth.service
-        sudo systemctl enable bluetooth.service
-        sudo systemctl status bluetooth.service
-        sudo systemctl restart bluetooth.service
-    #audio
-        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber --noconfirm
-        sudo systemctl enable --now pipewire
-        sudo systemctl enable --now wireplumber
-        sudo systemctl --global disable pulseaudio.service pulseaudio.socket
-        sudo pacman -S pavucontrol --noconfirm
-        systemctl --user status pipewire
-        systemctl --user status wireplumber
-        systemctl --user restart pipewire
-        systemctl --user restart wireplumber
-    #bluethooth y audio
-        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber bluez bluez-utils blueman --noconfirm
-        sudo systemctl enable --now pipewire
-        sudo systemctl enable --now wireplumber
-        sudo systemctl enable --now bluetooth.service
-        sudo pacman -S pavucontrol --noconfirm
-        systemctl --user status pipewire
-        systemctl --user status wireplumber
-        sudo systemctl status bluetooth.service
-        systemctl --user restart pipewire
-        systemctl --user restart wireplumber
-        sudo systemctl restart bluetooth.service
-#limpieza
-    yay -Syyu --noconfirm
-    yay -Scc --noconfirm
-    sudo rm -dfr /tmp/aur
     cd
-    sudo rm -dfr Arch-PiOf
+    cd Arch-PiOf
+    cd scripts
+    bash servicios.sh
 #servicio de actualizacion
     cd
     https://github.com/FerNandoGD24/APYAA.git
     cd APYAA
     bash install.sh
     cd
-#pre-fin
-    yay -R qterminal --noconfirm
-    yay -Syyuu --noconfirm
-    yay -Syyu --noconfirm
-    yay -Syu --noconfirm
-    yay -Syy --noconfirm
-    yay -Suu --noconfirm
-    yay -Syu --noconfirm
-    yay -Sy --noconfirm
-    yay -Su --noconfirm
-    yay -Scc --noconfirm
+#limpieza
+    cd
+    cd Arch-PiOf
+    cd scripts
+    bash limpieza.sh
 #fin
     echo ::{::::::::::::}::
     echo ::__todo_listo__::
