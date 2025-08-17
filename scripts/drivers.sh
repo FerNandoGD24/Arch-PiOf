@@ -15,7 +15,7 @@ while true; do
   start_time=$(date +%s)
   timeout=60
 
-  read -t $timeout -rp "Ingrese su opción [1-4]: " opcion
+  read -t $timeout -rp "Ingrese su opción [1-5]: " opcion
 
   if [ -z "$opcion" ]; then
     clear
