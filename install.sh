@@ -25,19 +25,19 @@
     sudo pacman -Syyuu --noconfirm
 #drivers
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash drivers.sh
     yay -S xorg-server xorg-xinit --noconfirm
 #yay
     #instalacion
         cd
-        cd Arch-PiOf
+        cd Arch-PiOF
         cd scripts
         bash yay.sh
 #ttf
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd paquetes
     git clone https://github.com/FerNandoGD24/ttf.git
     cd ttf
@@ -45,17 +45,17 @@
     sleep 5
 #DM-DE
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash DE-DM.sh
 #paquetes
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash paquetes.sh
 #kernel
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash kernel.sh
 #personalizacion
@@ -65,7 +65,7 @@
         mkdir .icons
 #servicios
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash servicios.sh
 #servicio de actualizacion
@@ -76,7 +76,7 @@
     cd
 #limpieza
     cd
-    cd Arch-PiOf
+    cd Arch-PiOF
     cd scripts
     bash limpieza.sh
 #fin
