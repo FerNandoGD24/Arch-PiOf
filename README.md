@@ -77,10 +77,13 @@ bash install.sh
 ---
 ## ⚠️ Durante la ejecución
 
-- Se te pedira elegir drivers a instalar, en caso de que no hagas nada en 60 segundos se instala el modo de compatibilidad (opcion 5)
+- Se te pedira elegir drivers a instalar, en caso de que no hagas nada en 60 segundos se instala el modo de compatibilidad (opcion 5).
 - Al inicio, te pedirá la contraseña solo una vez para instalar yay.
 - El script instala todos los paquetes de forma automática y sin intervención.
 - Al finalizar, el sistema se apagará automáticamente. Al encenderlo nuevamente, todo estará configurado.
+- El tiempo dependera de tu equipo y la velocidad de tu internet.
+- Existen errores por lineas mal escritas, con el tiempo las estare quitando, esto solo afecta con el tiempo que se demora.
+- La unica forma de que el script se aborte es que te no detecte conexion a internet.
 ---
 ## 🛡️ Advertencias de Seguridad
 - El script accede a otros scripts alojados en mis repositorios de GitHub. Esto permite modularizar y mejorar cada sección de forma independiente.
