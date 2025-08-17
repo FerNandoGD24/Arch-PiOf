@@ -98,3 +98,57 @@ fernando.gd.24.cc@gmail.com
 - Este proyecto va orientado específicamente a procesadores x86.
 - Este proyecto no tiene relación alguna con raspberry pi.
 - Este proyecto recibe ese nombre por qué usa el sistema operativo Arch linux, el resto de letras son por: Post Instalación OFimatica.
+  
+
+
+
+
+
+
+
+#!/bin/bash
+
+mostrar_menu() {
+  echo "Seleccione una opción:"
+  echo "1) Opción Uno"
+  echo "2) Opción Dos"
+  echo "3) Opción Tres"
+  echo "4) Opción Cuatro (por defecto tras 60 segundos)"
+}
+
+while true; do
+  mostrar_menu
+  start_time=$(date +%s)
+  timeout=60
+
+  read -t $timeout -rp "Ingrese su opción [1-4]: " opcion
+
+  if [ -z "$opcion" ]; then
+    echo -e "\n⏳ Tiempo agotado. Ejecutando opción 4..."
+    echo "*4*"
+    break
+  fi
+
+  case $opcion in
+    1)
+      echo "*1*"
+      break
+      ;;
+    2)
+      echo "*2*"
+      break
+      ;;
+    3)
+      echo "*3*"
+      break
+      ;;
+    4)
+      echo "*4*"
+      break
+      ;;
+    *)
+      echo "❌ Opción incorrecta. Intente nuevamente."
+      continue
+      ;;
+  esac
+done
