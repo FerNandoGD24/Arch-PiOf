@@ -1,4 +1,4 @@
-<h1 align="center">📦 Post-Instalación Ofimática para Arch Linux</h1>
+<h1 align="center">📦 Post-Instalación Ofimática para Arch Linux(actualmente no funciona, cuando tenga tiempo arreglo lo que malogre en la actualizacion anterior)</h1>
 
 <p align="center">
   Un script automatizado para configurar un entorno ligero de escritorio en Arch Linux, enfocado en tareas ofimáticas.
