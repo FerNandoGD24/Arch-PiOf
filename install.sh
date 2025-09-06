@@ -88,12 +88,13 @@ while true; do
       ;;
   esac
 done
-
+clear
 #apps
     yay -S --needed lxqt lightdm lightdm-gtk-greeter flatpak htop fastfetch konsole vlc vlc-plugin-ffmpeg spotify-launcher libreoffice-fresh libreoffice-fresh-es kate okular onlyoffice-bin firefox brave-bin webapp-manager-git bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol qpwgraph wpa_supplicant networkmanager networkmanager --noconfirm
     #limpieza
         yay -Syyuu --noconfirm
         yay -Scc --noconfirm
+        clear
 #servicios
     #internet
         sudo systemctl enable NetworkManager
@@ -114,6 +115,7 @@ done
         systemctl --user restart wireplumber
         sudo systemctl restart bluetooth.service
         sudo systemctl enable lightdm
+        clear
 #ttf
     cd
     cd Arch-PiOf
@@ -125,6 +127,7 @@ done
     yay -Scc --noconfirm
     cd
     sudo rm -dfr Arch-PiOf
+    clear
 #kernel
     yay -S linux-ltsc --noconfirm
     yay -R linux --noconfirm
@@ -139,6 +142,7 @@ done
     yay -Sy --noconfirm
     yay -Su --noconfirm
     yay -Scc --noconfirm
+    clear
 #fin
 clear
     echo "::____________::"
