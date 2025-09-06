@@ -180,6 +180,8 @@ done
     yay -Syyu --needed --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
+   #browser
+      yay -S --needed firefox brave-browser --noconfirm
 
 #kernel
     sudo pacman -S --needed linux-lts --noconfirm
