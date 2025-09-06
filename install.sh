@@ -93,91 +93,30 @@ done
     yay -S linux-ltsc --noconfirm
     yay -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
-#DE
-    yay -S lxqt --noconfirm
-#DM
-    yay -S lightdm lightdm-gtk-greeter --noconfirm
-#utilidades//extras
-    #discover
-         yay -S flatpak --noconfirm
-         yay -S discover --noconfirm
-    #ark
-        yay -S ark --noconfirm
-    #htop
-        yay -S htop --noconfirm
-    #fastfetch
-        yay -S fastfetch --noconfirm
-    #konsole
-        yay -S konsole --noconfirm
-#multimedia
-    #vlc
-        #paquete
-            yay -S vlc --noconfirm
-        #plugins
-            yay -S vlc-plugin-ffmpeg --noconfirm
-    #spotify
-        yay -S spotify-launcher --noconfirm
-#ofimatica
-    #libreoffice
-        #paquetes
-            yay -S libreoffice-fresh --noconfirm
-        #extras
-            yay -S libreoffice-fresh-es --noconfirm
-    #kate
-        yay -S kate --noconfirm
-    #okular
-        yay -S okular --noconfirm
-    #onlyoffice
-        yay -S onlyoffice-bin --noconfirm
-#web
-    #firefox
-        yay -S firefox --noconfirm
-    #brave
-        yay -S brave-bin --noconfirm
-    #webapp manager
-        yay -S webapp-manager-git --noconfirm
+#apps
+    yay -S --needed lxqt lightdm lightdm-gtk-greeter flatpak htop fastfetch konsole vlc vlc-plugin-ffmpeg spotify-launcher libreoffice-fresh libreoffice-fresh-es kate okular onlyoffice-bin firefox brave-bin webapp-manager-git bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol qpwgraph wpa_supplicant networkmanager networkmanager --noconfirm
     #limpieza
         yay -Syyuu --noconfirm
         yay -Scc --noconfirm
 #servicios
     #internet
-        sudo pacman -S networkmanager --noconfirm
         sudo systemctl enable NetworkManager
         sudo systemctl start NetworkManager
-        sudo pacman -S wpa_supplicant --noconfirm
-        sudo pacman -S networkmanager --noconfirm
-        sudo systemctl status NetworkManager
         sudo systemctl restart NetworkManager
-    #bluetooth
-        sudo pacman -S bluez bluez-utils --noconfirm
-        sudo pacman -S blueman --noconfirm
         sudo systemctl start bluetooth.service
         sudo systemctl enable bluetooth.service
-        sudo systemctl status bluetooth.service
         sudo systemctl restart bluetooth.service
-    #audio
-        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber --noconfirm
         sudo systemctl enable --now pipewire
         sudo systemctl enable --now wireplumber
         sudo systemctl --global disable pulseaudio.service pulseaudio.socket
-        sudo pacman -S pavucontrol --noconfirm
-        systemctl --user status pipewire
-        systemctl --user status wireplumber
         systemctl --user restart pipewire
         systemctl --user restart wireplumber
-    #bluethooth y audio
-        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber bluez bluez-utils blueman --noconfirm
         sudo systemctl enable --now pipewire
         sudo systemctl enable --now wireplumber
         sudo systemctl enable --now bluetooth.service
-        sudo pacman -S pavucontrol --noconfirm
-        systemctl --user status pipewire
-        systemctl --user status wireplumber
-        sudo systemctl status bluetooth.service
         systemctl --user restart pipewire
         systemctl --user restart wireplumber
         sudo systemctl restart bluetooth.service
-        #DM
         sudo systemctl enable lightdm
 #limpieza
     yay -Syyu --noconfirm
