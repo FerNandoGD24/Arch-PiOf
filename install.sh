@@ -91,11 +91,8 @@
         sudo tar -xvf ttf_u.tar -C ~/.fonts
 #yay
     yay -Syyuu --needed --noconfirm
-    #ofimatica
-        cd
-        cd Arch-PiOf
-        cd apps
-        sudo pacman -U --needed onlyoffice.tar.zst --noconfirm
+    #ofimatica            
+        yay -S --needed onlyoffice-bin --noconfirm
     #internet
         cd
         cd Arch-PiOf
