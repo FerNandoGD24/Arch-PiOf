@@ -110,10 +110,8 @@
     sudo rm -dfr /tmp/aur
 
 #kernel
-    sudo pacman -S linux-ltsc --noconfirm
+    sudo pacman -S linux-lts --noconfirm
     sudo pacman -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    sudo pacman -S linux
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #fin
     echo ::{::::::::::::}::
