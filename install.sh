@@ -114,6 +114,12 @@ done
         systemctl --user restart wireplumber
         sudo systemctl restart bluetooth.service
         sudo systemctl enable lightdm
+#ttf
+    cd
+    cd Arch-PiOf
+    git clone https://github.com/FerNandoGD24/ttf.git
+    cd ttf
+    bash ttf.sh
 #limpieza
     yay -Syyu --noconfirm
     yay -Scc --noconfirm
