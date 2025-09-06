@@ -20,72 +20,182 @@
 #mirrors
     clear
     sudo pacman -Syyuu --noconfirm
+#instalar yay
+    cd
+    git clone https://github.com/FerNandoGD24/Apps-linux-01.git
+    cd Apps-linux-01
+    sudo pacman -U --needed yay.tar.zst --noconfirm
+
 #drivers
+mostrar_menu() {
+  clear
+  echo "Instalacion de drivers"
+  echo "1) ATI"
+  echo "2) AMD"
+  echo "3) INTEL"
+  echo "4) NVIDIA"
+  echo "5) ALL (OPENSOURCE)"
+}
+
+while true; do
+  mostrar_menu
+  start_time=$(date +%s)
+  timeout=60
+
+  read -t $timeout -rp "Ingrese su opción [1-5]: " opcion
+
+  if [ -z "$opcion" ]; then
     clear
-    cd
-    cd Arch-PiOF
-    cd scripts
-    bash drivers.sh
-    sudo pacman -S xorg-server xorg-xinit --noconfirm
-#yay
-    clear
-    #instalacion
-        cd
-        cd Arch-PiOF
-        cd scripts
-        bash yay.sh
-#ttf
-    clear
-    cd
-    cd Arch-PiOF
-    cd paquetes
-    git clone https://github.com/FerNandoGD24/ttf.git
-    cd ttf
-    bash ttf.sh
-    sleep 5
-#DM-DE
-    clear
-    cd
-    cd Arch-PiOF
-    cd scripts
-    bash DE-DM.sh
-#paquetes
-    clear
-    cd
-    cd Arch-PiOF
-    cd scripts
-    bash paquetes.sh
+    echo -e "\n⏳ Tiempo agotado..."
+    echo "All (OpenSource)"
+    sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
+    break
+  fi
+
+  case $opcion in
+    1)
+      clear
+      echo "Ati"
+      sudo pacman -S xf86-video-ati mesa-amber lib32-mesa-amber --noconfirm
+      break
+      ;;
+    2)
+      clear
+      echo "Amd"
+      sudo pacman -S xf86-video-amdgpu mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver mesa-vdpau --noconfirm
+      break
+      ;;
+    3)
+      clear
+      echo "Intel"
+      sudo pacman -S xf86-video-intel mesa mesa-amber lib32-mesa lib32-mesa-amber vulkan-intel lib32-vulkan-intel libva-intel-driver libva-utils --noconfirm
+      break
+      ;;
+    4)
+      clear
+      echo "Nvidia"
+      sudo pacman -S xf86-video-noveau mesa lib32-mesa vulkan-nouveau lib32-vulkan-nouveau --noconfirm
+      break
+      ;;
+    5)
+      clear
+      echo "All (OpenSource)"
+      sudo pacman -S intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau --noconfirm
+      break
+      ;;
+    *)
+      echo "❌ Opción incorrecta. Intente nuevamente."
+      sleep 5
+      continue
+      ;;
+  esac
+done
+
 #kernel
-clear
-    cd
-    cd Arch-PiOF
-    cd scripts
-    bash kernel.sh
-#personalizacion
-    #carpetas
-        clear
-        cd
-        mkdir .themes
-        mkdir .icons
+    yay -S linux-ltsc --noconfirm
+    yay -R linux --noconfirm
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+#DE
+    yay -S lxqt --noconfirm
+#DM
+    yay -S lightdm lightdm-gtk-greeter --noconfirm
+#utilidades//extras
+    #discover
+         yay -S flatpak --noconfirm
+         yay -S discover --noconfirm
+    #ark
+        yay -S ark --noconfirm
+    #htop
+        yay -S htop --noconfirm
+    #fastfetch
+        yay -S fastfetch --noconfirm
+    #konsole
+        yay -S konsole --noconfirm
+#multimedia
+    #vlc
+        #paquete
+            yay -S vlc --noconfirm
+        #plugins
+            yay -S vlc-plugin-ffmpeg --noconfirm
+    #spotify
+        yay -S spotify-launcher --noconfirm
+#ofimatica
+    #libreoffice
+        #paquetes
+            yay -S libreoffice-fresh --noconfirm
+        #extras
+            yay -S libreoffice-fresh-es --noconfirm
+    #kate
+        yay -S kate --noconfirm
+    #okular
+        yay -S okular --noconfirm
+    #onlyoffice
+        yay -S onlyoffice-bin --noconfirm
+#web
+    #firefox
+        yay -S firefox --noconfirm
+    #brave
+        yay -S brave-bin --noconfirm
+    #webapp manager
+        yay -S webapp-manager-git --noconfirm
+    #limpieza
+        yay -Syyuu --noconfirm
+        yay -Scc --noconfirm
 #servicios
-clear
-    cd
-    cd Arch-PiOF
-    cd scripts
-    bash servicios.sh
-#servicio de actualizacion
-clear
-    cd
-    https://github.com/FerNandoGD24/APYAA.git
-    cd APYAA
-    bash install.sh
-    cd
+    #internet
+        sudo pacman -S networkmanager --noconfirm
+        sudo systemctl enable NetworkManager
+        sudo systemctl start NetworkManager
+        sudo pacman -S wpa_supplicant --noconfirm
+        sudo pacman -S networkmanager --noconfirm
+        sudo systemctl status NetworkManager
+        sudo systemctl restart NetworkManager
+    #bluetooth
+        sudo pacman -S bluez bluez-utils --noconfirm
+        sudo pacman -S blueman --noconfirm
+        sudo systemctl start bluetooth.service
+        sudo systemctl enable bluetooth.service
+        sudo systemctl status bluetooth.service
+        sudo systemctl restart bluetooth.service
+    #audio
+        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber --noconfirm
+        sudo systemctl enable --now pipewire
+        sudo systemctl enable --now wireplumber
+        sudo systemctl --global disable pulseaudio.service pulseaudio.socket
+        sudo pacman -S pavucontrol --noconfirm
+        systemctl --user status pipewire
+        systemctl --user status wireplumber
+        systemctl --user restart pipewire
+        systemctl --user restart wireplumber
+    #bluethooth y audio
+        sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber bluez bluez-utils blueman --noconfirm
+        sudo systemctl enable --now pipewire
+        sudo systemctl enable --now wireplumber
+        sudo systemctl enable --now bluetooth.service
+        sudo pacman -S pavucontrol --noconfirm
+        systemctl --user status pipewire
+        systemctl --user status wireplumber
+        sudo systemctl status bluetooth.service
+        systemctl --user restart pipewire
+        systemctl --user restart wireplumber
+        sudo systemctl restart bluetooth.service
+        #DM
+        sudo systemctl enable lightdm
 #limpieza
-clear
+    yay -Syyu --noconfirm
+    yay -Scc --noconfirm
     cd
-    cd Arch-PiOF
-    cd scripts
-    bash limpieza.sh
+    sudo rm -dfr Arch-PiOf
+#pre-fin
+    yay -Syyuu --noconfirm
+    yay -Syyu --noconfirm
+    yay -Syu --noconfirm
+    yay -Syy --noconfirm
+    yay -Suu --noconfirm
+    yay -Syu --noconfirm
+    yay -Sy --noconfirm
+    yay -Su --noconfirm
+    yay -Scc --noconfirm
 #fin
 clear
     echo "::____________::"
