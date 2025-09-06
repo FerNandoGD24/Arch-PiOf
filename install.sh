@@ -128,10 +128,7 @@ clear
     cd
     sudo rm -dfr Arch-PiOf
     clear
-#kernel
-    yay -S linux-ltsc --noconfirm
-    yay -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 #pre-fin
     yay -Syyuu --noconfirm
     yay -Syyu --noconfirm
@@ -143,6 +140,10 @@ clear
     yay -Su --noconfirm
     yay -Scc --noconfirm
     clear
+#kernel
+    yay -S linux-ltsc --noconfirm
+    yay -R linux --noconfirm
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #fin
 clear
     echo "::____________::"
