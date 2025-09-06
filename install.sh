@@ -89,10 +89,6 @@ while true; do
   esac
 done
 
-#kernel
-    yay -S linux-ltsc --noconfirm
-    yay -R linux --noconfirm
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #apps
     yay -S --needed lxqt lightdm lightdm-gtk-greeter flatpak htop fastfetch konsole vlc vlc-plugin-ffmpeg spotify-launcher libreoffice-fresh libreoffice-fresh-es kate okular onlyoffice-bin firefox brave-bin webapp-manager-git bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol qpwgraph wpa_supplicant networkmanager networkmanager --noconfirm
     #limpieza
@@ -123,6 +119,10 @@ done
     yay -Scc --noconfirm
     cd
     sudo rm -dfr Arch-PiOf
+#kernel
+    yay -S linux-ltsc --noconfirm
+    yay -R linux --noconfirm
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 #pre-fin
     yay -Syyuu --noconfirm
     yay -Syyu --noconfirm
