@@ -15,10 +15,7 @@
     echo ::__introdusca_su_contraseña::
     echo ::{::::::::::::::::::::::::}::
 #pacman
-    sudo pacman -Syy
-    #dependencias
-        sudo pacman -S -needed git base-devel go xorg-server libxss cbindgen clang imake inetutils jq lld llvm nasm nodejs python-setuptools rust unzip wasi-compiler-rt wasi-libc++ wasi-libc++abi wasi-libc yasm zip weston xorg-xwayland libxt startup-notification mime-types ttf-font ffmpeg ttf-font python-brautifulsoup4 python-configobj python-gobject python-pillow python-setproctitle python-tldextract xapp flatpak gst-plugins-ugly ttf-dejavu ttf-liberation ttf-carlito python-beautifulsoup4 xapp python-xapp python-tldextract python-setproctitle python-pillow python-configobj python-beautifulsoup4  --noconfirm
-    #drivers
+    sudo pacman -Syy    #drivers
         sudo pacman -S --needed intel-media-driver libva-intel-driver libva-mesa-driver mesa vulkan-intel vulkan noveau vulkan-radeon xf86-video-amdgpu xf86-video-ati xf86-video-noveau xorg-server xorg-xinit --noconfirm
     #escritorio
         sudo pacman -S --needed lxqt --noconfirm
@@ -93,24 +90,24 @@
         sudo tar -xvf ttf_u.tar -C /usr/local/share/fonts
         sudo tar -xvf ttf_u.tar -C ~/.fonts
 #yay
-    yay -Syyuu --noconfirm
+    yay -Syyuu --needed --noconfirm
     #ofimatica
-        yay -S onlyoffice-bin --noconfirm
+        yay -S onlyoffice-bin --needed --noconfirm
     #internet
-        yay -S webapp-manager-git --noconfirm
+        yay -S webapp-manager-git --needed --noconfirm
 #extras
     cd
     mkdir .themes
     mkdir .icons
 #limpieza
-    sudo pacman -Syyu --noconfirm
+    sudo pacman -Syyu --needed --noconfirm
     sudo pacman -Scc --noconfirm
-    yay -Syyu --noconfirm
+    yay -Syyu --needed --noconfirm
     yay -Scc --noconfirm
     sudo rm -dfr /tmp/aur
 
 #kernel
-    sudo pacman -S linux-lts --noconfirm
+    sudo pacman -S --needed linux-lts --noconfirm
     sudo pacman -R linux --noconfirm
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 #fin
