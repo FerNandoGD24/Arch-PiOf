@@ -92,9 +92,15 @@
 #yay
     yay -Syyuu --needed --noconfirm
     #ofimatica
-        yay -S onlyoffice-bin --needed --noconfirm
+        cd
+        cd Arch-PiOf
+        cd apps
+        sudo pacman -U --needed onlyoffice.tar.zst --noconfirm
     #internet
-        yay -S webapp-manager-git --needed --noconfirm
+        cd
+        cd Arch-PiOf
+        cd apps
+        sudo pacman -U --needed webapp.tar.zst --noconfirm
 #extras
     cd
     mkdir .themes
