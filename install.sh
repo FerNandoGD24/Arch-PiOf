@@ -21,9 +21,7 @@
     clear
     sudo pacman -Syyuu --noconfirm
 #instalar yay
-    cd
-    git clone https://github.com/FerNandoGD24/Apps-linux-01.git
-    cd Apps-linux-01
+    cd apps
     sudo pacman -U --needed yay.tar.zst --noconfirm
 
 #drivers
